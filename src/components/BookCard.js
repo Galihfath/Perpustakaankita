@@ -5,16 +5,29 @@ import { Link } from "react-router-dom";
 
 const BookCard = ({ book }) => {
   return (
-    <Box borderWidth="1px" borderRadius="lg" overflow="hidden" p={4} boxShadow="md">
-      <Image src={book.image} alt={book.title} borderRadius="md" />
-      <VStack spacing={2} mt={4}>
-        <Text fontSize="lg" fontWeight="bold" textAlign="center">
-          {book.title}
-        </Text>
-        <Text fontSize="sm" color="gray.500" textAlign="center">
-          {book.author}
-        </Text>
-        <Button as={Link} to={`/book/${book.id}`} colorScheme="red" size="sm">
+    <Box
+      borderWidth="1px"
+      borderRadius="lg"
+      overflow="hidden"
+      p={4}
+      boxShadow="md"
+      w={{ base: "100%", sm: "300px" }}
+      textAlign="center"
+      bg="white"
+      _hover={{ boxShadow: "xl", transform: "scale(1.05)", transition: "0.3s" }}
+    >
+      <Image
+        src={book.cover}
+        alt={book.title}
+        boxSize="250px"
+        objectFit="cover"
+        borderRadius="md"
+        mx="auto"
+      />
+      <VStack spacing={3} mt={4}>
+        <Text fontSize="lg" fontWeight="bold" noOfLines={2}>{book.title}</Text>
+        <Text fontSize="sm" color="gray.500" noOfLines={1}>{book.author}</Text>
+        <Button as={Link} to={`/book/${book.id}`} colorScheme="red" size="sm" width="80%">
           Lihat Detail
         </Button>
       </VStack>

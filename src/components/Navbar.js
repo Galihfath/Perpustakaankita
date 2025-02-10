@@ -7,7 +7,7 @@ const Navbar = () => {
   return (
     <Box bg="red.500" py={3} px={5} color="white">
       <Flex justify="space-between" align="center">
-        <Text fontSize="xl" fontWeight="bold">Perpustakaan Cinta 📚❤️</Text>
+        <Text fontSize="xl" fontWeight="bold">Repository Cinta 📚❤️</Text>
         <Flex gap={4}>
           <Link as={NavLink} to="/" _hover={{ textDecoration: "none", color: "pink.200" }}>
             Beranda
@@ -18,6 +18,7 @@ const Navbar = () => {
         </Flex>
       </Flex>
     </Box>
+    
   );
 };
 
